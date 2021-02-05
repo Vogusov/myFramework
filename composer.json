@@ -1,0 +1,25 @@
+{
+  "name": "vendor_name/06_final_system",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Ditrich",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "c\\": "c/",
+      "m\\": "m/",
+      "v\\": "v/"
+    },
+    "files": [
+      "m/model.php"
+    ]
+
+  }
+}
