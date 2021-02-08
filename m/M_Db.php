@@ -1,5 +1,5 @@
 <?php
-namespace m;
+namespace fw1\m;
 
 class M_Db {
 
@@ -11,20 +11,20 @@ class M_Db {
     define('DB_NAME', 'fw1');
     define('CHARSET','utf8');
 
-    $dsn = DB_DRIVER . ':host='. DB_SERVER .'dbname=' . DB_NAME .'charset='. CHARSET;
+    $dsn = DB_DRIVER . ':host='. DB_SERVER .';dbname=' . DB_NAME .';charset='. CHARSET;
     $opt = [
-      PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-      PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-      PDO::ATTR_EMULATE_PREPARES => false,
+      \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
+      \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC,
+      \PDO::ATTR_EMULATE_PREPARES => false,
     ];
 
     try {
-      $pdo = new PDO($dsn, DB_USERNAME, DB_PASSWORD, $opt);
+      $pdo = new \PDO($dsn, DB_USERNAME, DB_PASSWORD, $opt);
     }
 
-    catch (PDOException $e){
-      /* òàê äåëàòü íå íàäî */
-      die('Connection sucks: ' . $e->getMessage());
+    catch (\PDOException $e){
+      /* Ñ‚Ğ°Ğº Ğ´ĞµĞ»Ğ°Ñ‚ÑŒ Ğ½Ğµ Ğ½Ğ°Ğ´Ğ¾ */
+      die('Connection to database sucks: ' . $e->getMessage());
     }
 
     return $pdo;

@@ -28,8 +28,9 @@ spl_autoload_register(function($name){
 */
 
 
-require_once 'vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 //site.ru/index.php?act=auth&c=User
+use fw1\C;
 
 $action = 'action_';
 $action .=(isset($_GET['act'])) ? $_GET['act'] : 'index';
@@ -37,12 +38,12 @@ $action .=(isset($_GET['act'])) ? $_GET['act'] : 'index';
 switch ($_GET['c'])
 {
 	case 'articles':
-		$controller = new c\C_Page();
+		$controller = new fw1\c\C_Page();
 	case 'User':
-		$controller = new c\C_User();
+		$controller = new fw1\c\C_User();
 		break;
 	default:
-		$controller = new c\C_Page();
+		$controller = new fw1\c\C_Page();
 }
 
 $controller->Request($action);

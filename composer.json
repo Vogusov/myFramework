@@ -13,9 +13,7 @@
   },
   "autoload": {
     "psr-4": {
-      "c\\": "c/",
-      "m\\": "m/",
-      "v\\": "v/"
+      "fw1\\": ""
     },
     "files": [
       "m/model.php"

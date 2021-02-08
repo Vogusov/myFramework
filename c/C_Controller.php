@@ -3,7 +3,7 @@
 // Базовый класс контроллера.
 //
 
-namespace c;
+namespace fw1\c;
 
 abstract class C_Controller
 {
@@ -41,6 +41,7 @@ abstract class C_Controller
 	//
 	protected function Template($fileName, $vars = [])
 	{
+
 		// Установка переменных для шаблона.
 		foreach ($vars as $k => $v)
 		{

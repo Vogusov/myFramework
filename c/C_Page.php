@@ -1,6 +1,6 @@
 <?php
 
-namespace c;
+namespace fw1\c;
 //
 // Конттроллер страницы чтения.
 //
@@ -12,8 +12,7 @@ namespace c;
 //});
 //
 
-require_once 'vendor/autoload.php';
-
+require_once __DIR__ . '/../vendor/autoload.php';
 
 class C_Page extends C_Base
 {
