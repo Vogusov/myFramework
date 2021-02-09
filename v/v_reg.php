@@ -1,4 +1,4 @@
-<p><?= $text; ?></p>
+<h2><?= $text; ?></h2>
 
 <form method="post">
   <fieldset>
@@ -15,12 +15,12 @@
     <p>Ваше имя:</p>
     <p><input type="text" name="name" value="" required/></p>
     <p>Ваш E-mail для связи:</p>
-    <p><input type="email" name="email" value=""/></p>
+    <p><input type="email" name="email" value="" required/></p>
     <p>Ваш телефон для связи:</p>
-    <p><input type="tel" name="phone" value=""/></p>
+    <p><input type="tel" name="phone" value="" required/></p>
 
   </fieldset>
 
 
-  <p><input id="regist" type="submit" name="regist" value="Зарегистрироваться"/></p>
+  <p><input id="regist" type="submit" name="reg" value="Зарегистрироваться"/></p>
 </form>

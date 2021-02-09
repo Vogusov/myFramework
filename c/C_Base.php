@@ -10,7 +10,7 @@ abstract class C_Base extends C_Controller {
 
   protected function before() {
 
-    $this->title = 'имя сайта';
+    $this->title = 'myFramework';
     $this->content = '';
     $this->keyWords = "...";
 
