@@ -1,16 +1,6 @@
 <?php
 
 namespace fw1\c;
-//
-// Конттроллер страницы чтения.
-//
-
-//include_once('m/model.php');
-
-//spl_autoload_register(function(){
-//  include_once("m/model.php");
-//});
-//
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -51,5 +41,15 @@ class C_Page extends C_Base
     $text = 'Текст новостей... Еще... Все.';
     $this->content = $this->Template('v/v_news.php', ['text' => $text]);
   }
+
+
+  // показ страницы регистрации
+//  public function action_reg(){
+//    $this->title .= '::Регистрация';
+//    $text = 'Введите данные для вашей регистрации на сайте!';
+//    $this->content = $this->Template('v/v_reg.php', ['text' => $text]);
+//  }
+
+
 }
 

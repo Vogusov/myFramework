@@ -39,7 +39,7 @@ abstract class C_Controller
 	//
 	// Генерация HTML шаблона в строку.
 	//
-	protected function Template($fileName, $vars = [])
+	protected final function Template($fileName, $vars = [])
 	{
 
 		// Установка переменных для шаблона.

@@ -1,4 +1,6 @@
 <h2><?= $text; ?></h2>
+<p style="color:green"><?= $successRegText ?? null; ?></p>
+<p style="color:red"><?= $errText ?? null; ?></p>
 
 <form method="post">
   <fieldset>

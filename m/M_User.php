@@ -61,7 +61,7 @@ class M_User {
       return "Зарегались норм <br>";
 //      return true;
     } else {
-      return "Пользователь с таким логином $login уже существует <br>";
+      return false;
 //      return false;
     }
   }
@@ -70,16 +70,18 @@ class M_User {
   public function login($login, $password) {
 
     $user = $this->userExists($login);
-    var_dump($user);
-    echo '<br>';
-    var_dump($user['password']);
-    echo '<br>';
-    var_dump($password);
+
+//    var_dump($user);
+//    echo '<br>';
+    echo "ID: {$user['id']} ";
+//    echo '<br>';
+//    var_dump($password);
 
     if ($user) {
       if (password_verify($password, $user['password'])) {
-        $_SESSION['user_id'] = $user['$id'];
-        echo 'Пароль верен <br> ' . session_id();
+        $_SESSION['user_id'] = $user['id'];
+//        echo $_SESSION['user_id'];
+        return "Добро пожаловать, {$user['name']}. Ваш ID: {$_SESSION['user_id']} <br> " . session_id();
       } else {
         echo 'пароль неверен <br>';
       }

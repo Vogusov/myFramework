@@ -1,4 +1,5 @@
 <h2><?= $text; ?></h2>
+
 <form method="post">
   <p>ЛОГИН:</p>
   <input type="text" name="login">
